@@ -3,15 +3,11 @@ class Solution {
     int answer = 0;
 
     for(int i=0; i< absolutes.length; i++){
-      int num = 0;
-      if (signs[i]){
-        num = absolutes[i];
-      } else {
-        num = absolutes[i]-(absolutes[i]*2);
-      }
+      int sign = signs[i]? 1:-1;
+      int num = absolutes[i] * sign;
       answer += num;
     }
 
     return answer;
-    }
+  }
 }
