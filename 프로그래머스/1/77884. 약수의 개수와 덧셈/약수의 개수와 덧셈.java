@@ -1,22 +1,20 @@
 class Solution {
     public int solution(int left, int right) {
-    int answer = 0;
+     int answer = 0;
 
-    for(int i =left; i<=right; i++){
-      int numOfDivisor = 1;
-      for(int x = 1; x<=i/2 ; x++){
-        if(i%x ==0){
-          numOfDivisor ++;
+    for (int i = left; i <= right; i++) {
+      int divisor = 1;
+      for (int z = 1; z <= i/2; z++) {
+        if (i % z == 0) {
+          divisor++;
         }
       }
-
-      if(numOfDivisor%2==0){
+      if (divisor % 2 == 0) {
         answer += i;
-      }else{
-        answer -=i;
+      } else {
+        answer -= i;
       }
     }
-
     return answer;
   }
 }
