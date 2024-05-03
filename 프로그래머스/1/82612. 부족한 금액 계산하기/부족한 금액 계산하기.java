@@ -7,12 +7,7 @@ class Solution {
       answer -= (long) i *price;
     }
 
-    if (answer<0){
-      answer = answer*-1;
-    }else {
-      return answer=0;
-    }
-
-    return answer;
+    return answer<0? -answer : 0;
   }
 }
+
